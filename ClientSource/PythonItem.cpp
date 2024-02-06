@@ -1,4 +1,4 @@
-/*** Ýnclude Ekle: ***/
+/*** İnclude Ekle: ***/
 #ifdef SHOW_DROPPED_ITEM_INFORMATION
 #include "pythonskill.h"
 #endif
@@ -7,7 +7,7 @@
 
 void CPythonItem::CreateItem(DWORD dwVirtualID, DWORD dwVirtualNumber, float x, float y, float z, bool bDrop)
 
-/*** Deðiþtir: ***/
+/*** Değiştir: ***/
 
 #ifdef SHOW_DROPPED_ITEM_INFORMATION
 void CPythonItem::CreateItem(DWORD dwVirtualID, DWORD dwVirtualNumber, long socket0, long socket1, long socket2, DWORD count, float x, float y, float z, bool bDrop)
@@ -21,7 +21,7 @@ void CPythonItem::CreateItem(DWORD dwVirtualID, DWORD dwVirtualNumber, float x, 
 	{
 		z = CPythonBackground::Instance().GetHeight(x, y) + 10.0f;
 
-/*** Altýna Ekle: ***/
+/*** Altına Ekle: ***/
 
 #ifdef SHOW_DROPPED_ITEM_INFORMATION
 		if (pItemData->GetType() == CItemData::ITEM_TYPE_COSTUME && pItemData->GetSubType() == CItemData::COSTUME_WEAPON || pItemData->GetType() == CItemData::ITEM_TYPE_WEAPON && (pItemData->GetWeaponType() == CItemData::WEAPON_SWORD || pItemData->GetWeaponType() == CItemData::WEAPON_ARROW))
@@ -34,7 +34,7 @@ void CPythonItem::CreateItem(DWORD dwVirtualID, DWORD dwVirtualNumber, float x, 
 /*** Arat: ***/
 m_GroundItemInstanceMap.insert(TGroundItemInstanceMap::value_type(dwVirtualID, pGroundItemInstance));
 
-/*** Altýna Ekle: ***/
+/*** Altına Ekle: ***/
 #ifdef SHOW_DROPPED_ITEM_INFORMATION
 	char szText[1024];
 	const char* colorCode = "";
@@ -78,7 +78,7 @@ m_GroundItemInstanceMap.insert(TGroundItemInstanceMap::value_type(dwVirtualID, p
 /*** Arat: ***/
 pItemData->GetName(),
 
-/*** Deðiþtir: ***/
+/*** Değiştir: ***/
 #ifdef SHOW_DROPPED_ITEM_INFORMATION
 		szText,
 #else
